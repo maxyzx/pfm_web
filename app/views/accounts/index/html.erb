@@ -1,0 +1,29 @@
+<div class="container">
+  <%= link_to 'Create Account', new_account_path , class:"btn btn-outline-dark" %>
+  <p>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Account name</th>
+        <th scope="col">Status</th>
+        <th scope="col">Balance</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <% @accounts.each do |account| %>
+      <tbody>
+        <tr>
+          <td> <%=account.name %></td>
+          <td> <%=account.status %></td>
+          <td><%= balance_calc(account) %></td>
+          <td> <p class="text-muted">
+            <%= link_to 'Show', account %>
+            <%= link_to 'Edit', edit_account_path(account) %>
+            <%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      </tbody>
+    <% end %>
+  </table>
+  <%= paginate @accounts %>
+ </div>

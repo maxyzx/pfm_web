@@ -1,13 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="col sm-6 ">
-      <h1>Make money fun! </h1>
-      <p>Track your money way<p>
+      <h1 class="titile_home">Make money fun! </h1>
+      <p class=".mini_title">Track your money way<p>
       <% if user_signed_in? %>
-        <p>Wellcom</p>
+        OK
       <% else %>
         <nav class="my-2 my-md-0 mr-md-3">
-          <%= link_to "Sign Up", new_user_registration_path, class:"btn btn-primary" %>
+          <%= link_to "Sign up for free", new_user_registration_path, class:"btn btn-primary sign_up" %>
         </nav>
       <% end %>
 
