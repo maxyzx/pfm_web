@@ -22,8 +22,6 @@ class AccountsController < ApplicationController
     end
   end
 
-  def edit_form; end
-
   def edit
   end
 
