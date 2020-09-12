@@ -35,33 +35,29 @@
   margin-top: 50px;
 }
 
-.login_btn{
+.btn {
   background: #009E9E;
   border-radius: 4px;
   color : white;
   display: block;
   margin: auto;
-
 }
+
 .form_login{
   border: 1px solid #EBEBEB;
-
 }
+
 .title_form{
-  font-family: Noto Sans JP;
-  font-style: normal;
-  font-weight: bold;
   font-size: 28px;
   line-height: 28px;
   padding: 47px 0 36px 0 ;
 }
-.container_2{
+
+.container {
   padding: 0 30px 40px 30px;
 }
+
 .link_devise{
-  font-family: Noto Sans JP;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 12px;
   color: #23D2B6;
@@ -77,18 +73,12 @@
 }
 
 .name_user{
-  font-family: Noto Sans JP;
-  font-style: normal;
-  font-weight: bold;
   font-size: 16px;
   line-height: 23px;
   display: flex;
   align-items: center;
 }
 .item{
-  font-family: Noto Sans JP;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 20px;
   display: flex;

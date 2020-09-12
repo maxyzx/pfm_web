@@ -1,6 +1,6 @@
 class AccountsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_account, only: [:show, :update, :destroy, :edit]
+  before_action :set_account, only: [:show, :update, :destroy, :edit, :edit_form]
 
   def index
     @accounts = current_user.accounts
@@ -22,15 +22,13 @@ class AccountsController < ApplicationController
     end
   end
 
-
-
   def edit
   end
 
   def update
     respond_to do |format|
       if @account.update(account_params)
-        format.html { redirect_to @account, notice: 'account was successfully updated.' }
+        format.html { redirect_to accounts_path, notice: 'account was successfully updated.' }
       else
         format.html { render :edit }
       end
@@ -48,7 +46,7 @@ class AccountsController < ApplicationController
   end
 
   def account_params
-    params.require(:account).permit(:name)
+    params.require(:account).permit(:name, :status)
   end
 
   def set_account
