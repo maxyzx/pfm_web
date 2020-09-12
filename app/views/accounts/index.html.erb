@@ -8,10 +8,10 @@
       </div>
 
       <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#newForm" data-whatever="@getbootstrap">New Account</button>
-      <%= render "form", account: @account, target: "newForm" %>
+      <%= render "form", account: @account, target: "newForm", type: "new" %>
     </div>
 
-    <table class="table">
+    <table class="table lists">
       <tr>
         <th scope="col">Account name</th>
         <th scope="col">Status</th>
@@ -20,11 +20,12 @@
       <tbody>
         <% @accounts.each do |account| %>
           <% if account.id %>
-            <tr>
+            <tr class=<%= account.status ? "enable" : "disable" %>>
               <td><%=account.name %></td>
-              <td><%=account.status %></td>
+              <td><%= account.status ? "Enable" : "Disable" %></td>
               <td>
-                <%= link_to "Edit", edit_form_account_path(account.id), remote: true, data: { toggle: 'modal', target: "#editForm_#{account.id}" } %>
+                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="<%= "#editForm_#{account.id}" %>">Edit Account</button>
+                <%= render "form", account: account, target: "editForm_#{account.id}", type: "edit" %>
               </td>
             </tr>
           <% end %>
