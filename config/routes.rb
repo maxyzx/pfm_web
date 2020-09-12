@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root "static_pages#home"
   devise_for :users
-  resources :accounts
-
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :accounts do
+    get :edit_form, on: :member
+  end
 end

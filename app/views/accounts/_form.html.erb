@@ -1,21 +1,18 @@
-<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">New Account</button>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id=<%= target %> tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body">
-        <%= form_with(model: @account, local: true) do |form| %>
-        <div class="form-group">
-          <%= form.label :name,class:"col-form-label" ,for:"recipient-name"%>
-          <%= form.text_field :name,  class:"form-control",id:"recipient-name" %>
-        </div>
+        <%= form_with(model: account) do |form| %>
+          <div class="form-group">
+            <%= account.name %>
+            <%= form.label :name, value: account.name, class:"col-form-label"%>
+            <%= form.text_field :name, class:"form-control" %>
+          </div>
 
-        <div class="actions">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-
-          <%= form.submit class:"btn btn-primary " %>
-        </div>
-
+          <div class="actions">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <%= form.submit class:"btn btn-primary" %>
+          </div>
         <% end %>
       </div>
     </div>
