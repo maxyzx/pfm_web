@@ -1,0 +1,6 @@
+<% if @account.errors.blank? %>
+  $('#account-modal').modal('hide');
+  $('table tbody').append('<%= j render "account_row", account: @account %>');
+<% else %>
+  alert('Algo falló');
+<% end %>
