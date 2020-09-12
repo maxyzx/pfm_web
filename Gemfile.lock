@@ -93,8 +93,8 @@ GEM
       request_store (>= 1.0)
     erubi (1.9.0)
     ffi (1.13.1)
-    font-awesome-sass (4.7.0)
-      sass (>= 3.2)
+    font-awesome-sass (4.2.2)
+      sass (~> 3.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.8.5)
@@ -121,6 +121,7 @@ GEM
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
+    pg (1.2.3)
     public_suffix (4.0.6)
     puma (4.3.5)
       nio4r (~> 2.0)
@@ -195,7 +196,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -235,16 +235,16 @@ DEPENDENCIES
   capybara (>= 2.15)
   devise
   draper
-  font-awesome-sass (~> 4.7.0)
+  font-awesome-sass (~> 4.2.0)
   jbuilder (~> 2.7)
   listen (~> 3.2)
+  pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
   sass-rails (>= 6)
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3 (~> 1.4)
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 3.3.0)
