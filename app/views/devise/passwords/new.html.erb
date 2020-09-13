@@ -1,5 +1,5 @@
 <div class="container form_login" style="  width:30% ">
-  <div class="container container_2">
+  <div class="container">
     <h2 class="text-center title_form">Forgot password</h2>
 
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
@@ -11,8 +11,7 @@
       </div>
       <p>
       <div class="actions">
-        <%= f.submit "Send instructions email", class:"btn login_btn icon"  %>
+        <%= f.submit "Send instructions email", class:"btn icon"  %>
       </div>
     <% end %>
-
 </div>

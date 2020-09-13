@@ -1,5 +1,5 @@
 <div class="container form_login" style="  width:25% ">
-  <div class="container container_2">
+  <div class="container">
     <h2 class="text-center title_form">Login</h2>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -14,7 +14,7 @@
       </div>
       <p>
       <div class="actions">
-        <%= f.submit "Log in", class:"btn login_btn icon" ,style:"width:180px; margin-bottom:30px"%>
+        <%= f.submit "Log in", class:"btn icon" ,style:"width:180px; margin-bottom:30px"%>
       </div>
       <p>
     <% end %>
