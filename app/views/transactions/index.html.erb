@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-sm-2 border-right left-table">
+    <%= render "share/menu_lefttb" %>
+  </div>
+  <div class="col-sm-10 border-left abc">
+    <div class="row line-header">
+      <div class="col-sm-10">
+        <p class="title-table">Transaction</p>
+      </div>
+      <div class="col-sm-2">
+
+        <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#newForm" data-whatever="@getbootstrap">New Transaction</button>
+        <%= render "form", account: @transaction, target: "newForm", type: "new" %>
+      </div>
+    </div>
+
+    <table class="table table-borderless">
+      <tr>
+        <th scope="col">Transaction Name</th>
+        <th scope="col">Creatgory</th>
+        <th scope="col">Accounts</th>
+        <th scope="col">Ammount</th>
+        <th scope="col">Acctions</th>
+      </tr>
+      <tbody>
+        <% @transactions.each do |transaction| %>
+          <tr>
+            <td><%= transaction.name %></th>
+            <td><%= transaction.creatgory%> </td>
+            <td><%=transaction.account.name %></td>
+            <td><%=transaction.amount %></td>
+            <td>
+              Edit
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+
+    </table>
+  </div>
+</div>
