@@ -29,13 +29,12 @@
   font-size: 16px;
   font-weight: 800;
 
-
   text-align: center;
   padding: 17px;
   margin-top: 50px;
 }
 
-.btn {
+.button {
   background: #009E9E;
   border-radius: 4px;
   color : white;
@@ -65,6 +64,7 @@
 .link_devise:hover {
   color: black;
 }
+
 .input_form{
   margin-bottom: 25px;
 }
@@ -83,7 +83,4 @@
   line-height: 20px;
   display: flex;
   align-items: center;
-}
-.abc{
-  padding-left:0px;
 }

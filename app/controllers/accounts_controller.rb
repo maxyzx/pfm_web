@@ -4,10 +4,11 @@ class AccountsController < ApplicationController
 
   def index
     @accounts = current_user.accounts
+    @account = current_user.accounts.new
+
   end
 
   def new
-    @account = current_user.accounts.new
   end
 
   def create

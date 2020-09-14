@@ -2,16 +2,18 @@
   <div class="col-sm-2 border-right">
   </div>
   <div class="col-sm-10 border-left abc">
-    <div class="row">
-      <div class="col-sm-6">
-        <h1>Account</h1>
+    <div class="row line-header">
+      <div class="col-sm-10">
+        <p class="title-table">Account</p>
       </div>
+      <div class="col-sm-2">
 
-      <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#newForm" data-whatever="@getbootstrap">New Account</button>
-      <%= render "form", account: @account, target: "newForm", type: "new" %>
+        <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#newForm" data-whatever="@getbootstrap">New Account</button>
+        <%= render "form", account: @account, target: "newForm", type: "new" %>
+      </div>
     </div>
 
-    <table class="table lists">
+    <table class="table table-borderless">
       <tr>
         <th scope="col">Account name</th>
         <th scope="col">Status</th>
@@ -20,11 +22,11 @@
       <tbody>
         <% @accounts.each do |account| %>
           <% if account.id %>
-            <tr class=<%= account.status ? "enable" : "disable" %>>
+            <tr class=<%= account.status ? "Acctive" : "Disable" %>>
               <td><%=account.name %></td>
-              <td><%= account.status ? "Enable" : "Disable" %></td>
+              <td class="acctive-color"><%= account.status ? "Acctive" : "Disable" %></td>
               <td>
-                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="<%= "#editForm_#{account.id}" %>">Edit Account</button>
+                <div type="button"  class="text-success" data-toggle="modal" data-target="<%= "#editForm_#{account.id}" %>">Edit Account</div>
                 <%= render "form", account: account, target: "editForm_#{account.id}", type: "edit" %>
               </td>
             </tr>

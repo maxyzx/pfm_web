@@ -12,11 +12,14 @@
             <%= form.label :name, class:"col-form-label"%>
             <%= form.text_field :name, class:"form-control" %>
           </div>
-
+      <% if type == "new" %>
+      <% else %>
           <div class="form-group">
             <%= form.label :status, class:"col-form-label"%>
             <%= form.check_box :status, class:"form-control" %>
           </div>
+
+      <%end %>
 
           <div class="actions">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>

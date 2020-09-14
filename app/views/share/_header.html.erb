@@ -1,4 +1,4 @@
-<div class=" border-bottom shadow-sm">
+<div class=" border-bottom shadow-sm  ">
   <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-2 mb-2 bg-white container ">
     <%= link_to root_path, class: "my-0 mr-md-auto font-weight-normal text-dark text-decoration-none" do %>
       <h5>Personal Financial Management</h5>
@@ -7,7 +7,7 @@
     <% if user_signed_in? %>
       <div class="btn-group" >
       <i class="fas fa-circle"></i>
-        <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="https://tintaynguyen.com/wp-content/uploads/2016/10/6e851119-b702-46f9-84a6-72528b-4543-9390-1475655691.jpg" width="40" height="30">
+        <button type="button" class=" btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="https://tintaynguyen.com/wp-content/uploads/2016/10/6e851119-b702-46f9-84a6-72528b-4543-9390-1475655691.jpg" width="40" height="30">
 </button>
         </button>
         <div class="dropdown-menu dropdown-menu-right">
@@ -20,7 +20,7 @@
 
     <% else %>
       <nav class="my-2 my-md-0 mr-md-3">
-        <%= link_to "Login", new_user_session_path, class:"btn" %>
+        <%= link_to "Login", new_user_session_path, class:"btn button" %>
       </nav>
     <% end %>
   </div>

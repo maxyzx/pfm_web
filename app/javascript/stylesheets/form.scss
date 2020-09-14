@@ -1,7 +1,38 @@
-table.lists {
+table.table-borderless {
+  color: #A9A9A9;
+  font-size: 15px;
+  line-height: 15px;
+  margin-left: -14px;
+  margin-top: 36px;
+
   tr {
-    &.disable {
-      color: red;
+    padding: auto;
+    border-bottom: 1px solid #EBEBEB;
+    td{
+      height: 60px;
+      padding-top: 20px;
+    }
+    &.Acctive {
+      color: black;
+      font-size: 15px;
+      line-height: 15px;
+      td{
+        &.acctive-color{
+          color: #23D2B6;
+        }
+      }
     }
   }
+}
+.btn-outline-success{
+  margin-right: 1px;
+}
+
+.title-table{
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 28px;  }
+
+.line-header{
+  margin-top: 34px;
 }
