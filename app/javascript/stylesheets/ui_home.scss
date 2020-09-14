@@ -42,6 +42,9 @@
   margin: auto;
 }
 
+.button-cancel{
+}
+
 .form_login{
   border: 1px solid #EBEBEB;
 }
@@ -83,4 +86,19 @@
   line-height: 20px;
   display: flex;
   align-items: center;
+}
+.actions{
+  padding: 35px;
+  .btn {
+    width: 180px;
+    height: 44px;
+    border: 1px solid #EBEBEB;
+
+  }
+  .btn.btn-primary{
+    background-color: #009E9E;
+    border-radius: 1px solid #009E9E;
+    color : white;
+
+  }
 }
