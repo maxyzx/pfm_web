@@ -36,15 +36,7 @@ class AccountsController < ApplicationController
     end
   end
 
-  def destroy
-    @account.destroy
-    respond_to do |format|
-      format.html { redirect_to accounts_url, notice: 'account was successfully destroyed.' }
-    end
-  end
 
-  def show
-  end
 
   def account_params
     params.require(:account).permit(:name, :status)

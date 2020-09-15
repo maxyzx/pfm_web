@@ -3,10 +3,10 @@ class TransactionsController < ApplicationController
   before_action :set_transaction, only: [:show, :update, :destroy, :edit, :edit_form]
 
   def index
-    @transaction=current_user.transactions
+    @transactions = current_user.transactions
     @transaction = current_user.transactions.new
-
   end
+
   def create
     @transaction = current_user.transactions.new(transaction_params)
 
@@ -17,16 +17,25 @@ class TransactionsController < ApplicationController
         format.html { render :new }
       end
     end
-
-
   end
+
+  def update
+    respond_to do |format|
+      if @transaction.update(transaction_params)
+        format.html { redirect_to transactions_path, notice: 'Transaction was successfully updated.'}
+      else
+        format.html { render :show }
+      end
+    end
+  end
+
 
 
   def transaction_params
-    params.require(:transaction).permit(:name, :category , :amount)
+    params.require(:transaction).permit(:name, :category , :amount ,:account_id)
   end
 
   def set_transaction
-    @account = Account.find(params[:id])
+    @transaction = Transaction.find(params[:id])
   end
 end

@@ -10,7 +10,7 @@
       <div class="col-sm-2">
 
         <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#newForm" data-whatever="@getbootstrap">New Transaction</button>
-        <%= render "form", account: @transaction, target: "newForm", type: "new" %>
+        <%= render "form", transaction: @transaction, target: "newForm", type: "new" %>
       </div>
     </div>
 
@@ -24,18 +24,20 @@
       </tr>
       <tbody>
         <% @transactions.each do |transaction| %>
-          <tr>
-            <td><%= transaction.name %></th>
-            <td><%= transaction.creatgory%> </td>
-            <td><%=transaction.account.name %></td>
-            <td><%=transaction.amount %></td>
-            <td>
-              Edit
-            </td>
-          </tr>
+          <% if transaction.id %>
+            <tr>
+              <td><%= transaction.name %></th>
+              <td><%= transaction.category%> </td>
+              <td><%= transaction.account&.name %> </td>
+              <td><%= transaction.amount %></td>
+              <td>
+                <div type="button"  class="text-success" data-toggle="modal" data-target="<%="#editForm_#{transaction.id}" %>">Edit Transaction</div>
+                <%= render "form", transaction: transaction, target: "editForm_#{transaction.id}", type: "edit" %>
+              </td>
+            </tr>
+          <% end %>
         <% end %>
       </tbody>
-
     </table>
   </div>
 </div>
