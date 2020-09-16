@@ -9,7 +9,6 @@ class TransactionsController < ApplicationController
 
   def create
     @transaction = current_user.transactions.new(transaction_params)
-
     respond_to do |format|
       if @transaction.save
         format.html { redirect_to transactions_path, notice: 'Transaction was successfully created.' }
@@ -32,7 +31,7 @@ class TransactionsController < ApplicationController
 
 
   def transaction_params
-    params.require(:transaction).permit(:name, :category , :amount ,:account_id)
+    params.require(:transaction).permit(:name, :category , :amount ,:account_id,:transaction_type)
   end
 
   def set_transaction

@@ -22,13 +22,18 @@
           </div>
 
           <div class="field">
-             <%= form.label :account_id %>
-                <%= form.collection_select :account_id, current_user.accounts, :id, :name %>
-              </div>
+            <%= form.label :transaction_type %>
+            <p><%= form.select :transaction_type, [["Deposit", 0], ["Expense", 1]] %>
+          </div>
+
+          <div class="field">
+            <%= form.label :account_id %>
+            <%= form.collection_select :account_id, current_user.accounts, :id, :name %>
+          </div>
 
           <div class="actions container">
             <button type="button" class="btn btn-outline-secondary " data-dismiss="modal">Cancel</button>
-            <%= form.submit class:"btn btn-primary"  %>
+            <%= form.submit class:"btn btn-primary"%>
           </div>
         <% end %>
       </div>

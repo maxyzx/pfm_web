@@ -18,7 +18,9 @@
       <tr>
         <th scope="col">Account name</th>
         <th scope="col">Status</th>
+        <th scope="col">Balance</th>
         <th scope="col">Actions</th>
+
       </tr>
       <tbody>
         <% @accounts.each do |account| %>
@@ -26,10 +28,12 @@
             <tr class=<%= account.status ? "Acctive" : "Disable" %>>
               <td><%=account.name %></td>
               <td class="acctive-color"><%= account.status ? "Acctive" : "Disable" %></td>
+              <td><%= balance_calc(account) %></td>
               <td>
                 <div type="button"  class="text-success" data-toggle="modal" data-target="<%= "#editForm_#{account.id}" %>">Edit Account</div>
                 <%= render "form", account: account, target: "editForm_#{account.id}", type: "edit" %>
               </td>
+
             </tr>
           <% end %>
         <% end %>
