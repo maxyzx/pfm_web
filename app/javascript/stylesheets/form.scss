@@ -15,19 +15,19 @@ tr {
   td.black{
     color: #2A2A2A;
   }
-  &.Acctive {
+
+  &.active {
     color: black;
     font-size: 15px;
     line-height: 15px;
     td{
-      &.acctive-color{
+      &.active-color{
         color: #23D2B6;
         }
       }
     }
   }
 }
-
 
 .btn-outline-success{
   margin-right: 1px;
@@ -56,4 +56,3 @@ tr {
 .col-sm-2.border-right.left-table{
   height:calc(100vh - 60px);
 }
-

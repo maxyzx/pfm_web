@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-sm-2 border-right left-table">
-    <%= render "share/menu_lefttb" %>
+    <%= render "share/link" %>
   </div>
   <div class="col-sm-10 border-left abc">
     <div class="row line-header">
@@ -20,6 +20,7 @@
         <th scope="col">Creatgory</th>
         <th scope="col">Accounts</th>
         <th scope="col">Ammount</th>
+        <th scope="col">Type</th>
         <th scope="col">Acctions</th>
       </tr>
       <tbody>
@@ -30,11 +31,15 @@
               <td class="black"><%= transaction.category%> </td>
               <td class="black"><%= transaction.account&.name %></td>
               <td class="black"><%= transaction.amount %></td>
+
+              <td class="black"> <%=transaction.transaction_type == 0 ? "Deposit" : "Expense"%> </td>
+
               <td>
                 <div type="button"  class="text-success" data-toggle="modal" data-target="<%="#editForm_#{transaction.id}" %>">Edit Transaction</div>
                 <%= render "form", transaction: transaction, target: "editForm_#{transaction.id}", type: "edit" %>
               </td>
             </tr>
+
           <% end %>
         <% end %>
       </tbody>

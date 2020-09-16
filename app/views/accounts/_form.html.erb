@@ -18,8 +18,13 @@
             <%= form.label :acctive  %>
             <%= form.check_box :status %>
           </div>
-
       <%end %>
+
+
+      <div class="field">
+        <%= form.label :currency %>
+        <p><%= form.select :currency_type, [["VND", 0], ["USD", 1]] %>
+      </div>
 
           <div class="actions container">
             <button type="button" class="btn btn-outline-secondary " data-dismiss="modal">Cancel</button>

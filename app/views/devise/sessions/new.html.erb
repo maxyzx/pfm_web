@@ -1,16 +1,16 @@
-<div class="container form_login" style="max-width:400px;">
+<div class="container form-login" style="max-width:400px;">
   <div class="container">
-    <h2 class="text-center title_form">Login</h2>
+    <h2 class="text-center title-form">Login</h2>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
         <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", required:"required" ,class:"form-control input_form"%>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", required:"required" ,class:"form-control input-form"%>
       </div>
       <p>
       <div class="field">
         <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "current-password" , required:"required" ,class:"form-control input_form" %>
+        <%= f.password_field :password, autocomplete: "current-password" , required:"required" ,class:"form-control input-form" %>
       </div>
       <p>
       <div class="actions">

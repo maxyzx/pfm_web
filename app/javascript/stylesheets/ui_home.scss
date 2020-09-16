@@ -1,30 +1,14 @@
-.titile_home{
+.title-home{
   font-weight: 800;
   font-size: 74px;
   padding-bottom: 35px;
 }
 
-.mini_title{
+.mini-title{
   font-size: 24px;
   line-height: 31px;
   padding-bottom: 48px;
 
-
-}
-
-.sign_up{
-  background: #3A5AFF;
-  border-radius: 4px;
-  width: 255px;
-  height: 56px;
-
-  font-family: Montserrat;
-  font-size: 16px;
-  font-weight: 800;
-
-  text-align: center;
-  padding: 17px;
-  margin-top: 50px;
 }
 
 .button {
@@ -34,11 +18,12 @@
   display: block;
   margin: auto;
 }
-.form_login{
+
+.form-login{
   border: 1px solid #EBEBEB;
 }
 
-.title_form{
+.title-form{
   font-size: 28px;
   line-height: 28px;
   padding: 47px 0 36px 0 ;
@@ -48,23 +33,25 @@
   padding: 0 30px 40px 30px;
 }
 
-.link_devise{
+.link-devise{
   font-size: 12px;
   line-height: 12px;
   color: #23D2B6;
 }
-.link_devise:hover {
+
+.link-devise:hover {
   color: black;
 }
 
-.input_form{
+.input-form{
   margin-bottom: 25px;
 }
+
 .dropdown-menu{
   margin-top: 30px;
 }
 
-.name_user{
+.name-user{
   font-weight: bold;
   font-size: 16px;
   line-height: 23px;
@@ -72,12 +59,14 @@
   align-items: center;
   padding: 18px 0 35px 22px ;
 }
+
 .item{
   font-size: 14px;
   line-height: 20px;
   display: flex;
   align-items: center;
 }
+
 .actions{
   padding: 35px;
   .btn {
@@ -93,6 +82,7 @@
 
   }
 }
+
 .boder-bottom.shadow-sm{
   height: 60px;
   padding-top: 60px;
@@ -100,10 +90,9 @@
     font-weight: bold;
     font-size: 16px;
     line-height: 205%;
-
   }
-
 }
+
 .dot{
   height: 40px;
   width: 40px;
@@ -112,6 +101,7 @@
   display: inline-block;
   margin: 2px 2px 2px 2px;
 }
+
 .dot:hover{
   height: 40px;
   width: 40px;
@@ -125,8 +115,6 @@
   .row{
     .col-sm-6{
       padding: 60px
-
-
     }
     .btn.btn-primary{
       height:56px;
@@ -136,13 +124,12 @@
       padding: 15px;
     }
   }
-
 }
-.aaaa:hover {
+
+.boder-dot:hover {
   height: 44px;
   width: 44px;
   background-color: blue;
   border-radius: 50%;
   display: inline-block;
-
 }
