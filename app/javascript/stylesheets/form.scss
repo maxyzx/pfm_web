@@ -5,25 +5,30 @@ table.table-borderless {
   margin-left: -14px;
   margin-top: 36px;
 
-  tr {
-    padding: auto;
-    border-bottom: 1px solid #EBEBEB;
+tr {
+  padding: auto;
+  border-bottom: 1px solid #EBEBEB;
+  td{
+    height: 60px;
+    padding-top: 20px;
+  }
+  td.black{
+    color: #2A2A2A;
+  }
+  &.Acctive {
+    color: black;
+    font-size: 15px;
+    line-height: 15px;
     td{
-      height: 60px;
-      padding-top: 20px;
-    }
-    &.Acctive {
-      color: black;
-      font-size: 15px;
-      line-height: 15px;
-      td{
-        &.acctive-color{
-          color: #23D2B6;
+      &.acctive-color{
+        color: #23D2B6;
         }
       }
     }
   }
 }
+
+
 .btn-outline-success{
   margin-right: 1px;
 }

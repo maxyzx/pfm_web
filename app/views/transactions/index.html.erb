@@ -26,10 +26,10 @@
         <% @transactions.each do |transaction| %>
           <% if transaction.id %>
             <tr>
-              <td><%= transaction.name %></th>
-              <td><%= transaction.category%> </td>
-              <td><%= transaction.account&.name %> </td>
-              <td><%= transaction.amount %></td>
+              <td class="black"><%= transaction.name %></th>
+              <td class="black"><%= transaction.category%> </td>
+              <td class="black"><%= transaction.account&.name %></td>
+              <td class="black"><%= transaction.amount %></td>
               <td>
                 <div type="button"  class="text-success" data-toggle="modal" data-target="<%="#editForm_#{transaction.id}" %>">Edit Transaction</div>
                 <%= render "form", transaction: transaction, target: "editForm_#{transaction.id}", type: "edit" %>

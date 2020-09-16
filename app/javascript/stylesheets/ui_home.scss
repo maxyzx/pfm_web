@@ -9,11 +9,7 @@
 }
 
 .mini_title{
-  width: 476px;
-  height: 62px;
 
-  font-family: Montserrat;
-  font-weight: normal;
   font-size: 24px;
   line-height: 31px;
 
@@ -100,5 +96,31 @@
     border-radius: 1px solid #009E9E;
     color : white;
 
+  }
+}
+.boder-bottom.shadow-sm{
+  height: 60px;
+  padding-top: 60px;
+  .text-dark.text-decoration-none{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 205%;
+
+  }
+
+}
+.dot{
+  height: 40px;
+  width: 40px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.home-page{
+  .row{
+    .col-sm-6{
+      padding: 60px
+    }
   }
 }
