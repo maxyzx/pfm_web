@@ -5,10 +5,11 @@
       <p class="mini_title">Track your money way<p>
       <% if user_signed_in? %>
         <%= link_to 'Account', accounts_path %>
+        <%= link_to 'Transaction', transactions_path %>
 
       <% else %>
         <nav class="my-2 my-md-0 mr-md-3">
-          <%= link_to "Sign up for free", new_user_registration_path, class:"btn-primary sign_up" %>
+          <%= link_to "Sign up for free", new_user_registration_path, class:"btn btn-primary " %>
         </nav>
       <% end %>
 

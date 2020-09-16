@@ -5,18 +5,16 @@
       <% end %>
       <div class="">
         <% if user_signed_in? %>
-          <div class="btn-group" >
-          <i class="fas fa-circle"></i>
-            <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span class="dot"></span>
-
+          <div class="btn-group " >
+            <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+              <span class="aaaa"><span class="dot"></span></span>
             </a>
             </button>
             <div class="dropdown-menu dropdown-menu-right">
-              <p class="dropdown-item name_user"><%= current_user.decorate.full_name %></p>
+              <p class="name_user"><%= current_user.decorate.full_name %></p>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item item">Settings</a>
-              <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"dropdown-item item",style:"color:red" %>
+              <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"item",style:" padding:20px 0 33px 22px;color:red" %>
             </div>
           </div>
 

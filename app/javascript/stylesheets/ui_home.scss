@@ -1,17 +1,14 @@
 .titile_home{
-  width: 522px;
-  height: 188px;
-
-  font-family: Montserrat;
   font-weight: 800;
   font-size: 74px;
-  margin-bottom: 35px;
+  padding-bottom: 35px;
 }
 
 .mini_title{
-
   font-size: 24px;
   line-height: 31px;
+  padding-bottom: 48px;
+
 
 }
 
@@ -37,10 +34,6 @@
   display: block;
   margin: auto;
 }
-
-.button-cancel{
-}
-
 .form_login{
   border: 1px solid #EBEBEB;
 }
@@ -72,10 +65,12 @@
 }
 
 .name_user{
+  font-weight: bold;
   font-size: 16px;
   line-height: 23px;
   display: flex;
   align-items: center;
+  padding: 18px 0 35px 22px ;
 }
 .item{
   font-size: 14px;
@@ -115,12 +110,39 @@
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
+  margin: 2px 2px 2px 2px;
+}
+.dot:hover{
+  height: 40px;
+  width: 40px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 2px 2px 2px 2px;
 }
 
 .home-page{
   .row{
     .col-sm-6{
       padding: 60px
+
+
+    }
+    .btn.btn-primary{
+      height:56px;
+      width:256px;
+      font-weight: 800;
+      font-size: 16px;
+      padding: 15px;
     }
   }
+
+}
+.aaaa:hover {
+  height: 44px;
+  width: 44px;
+  background-color: blue;
+  border-radius: 50%;
+  display: inline-block;
+
 }
