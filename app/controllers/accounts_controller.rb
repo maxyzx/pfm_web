@@ -3,8 +3,8 @@ class AccountsController < ApplicationController
   before_action :set_account, only: [:show, :update, :destroy, :edit, :edit_form]
 
   def index
-    @accounts = current_user.accounts
-    @account = current_user.accounts.new
+    @accounts = current_user.accounts.decorate
+    @account = current_user.accounts.new.decorate
 
   end
 
@@ -12,7 +12,7 @@ class AccountsController < ApplicationController
   end
 
   def create
-    @account = current_user.accounts.new(account_params)
+    @account = current_user.accounts.new(account_params).decorate
 
     respond_to do |format|
       if @account.save

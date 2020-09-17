@@ -28,7 +28,10 @@
             <tr class=<%= account.status ? "active" : "disable" %>>
               <td><%=account.name %></td>
               <td class="active-color"><%= account.status ? "Active" : "Disable" %></td>
-              <td><%= balance_calc(account) %> <%=account.currency_type == 0 ? "VND" : "USA"%></td>
+              <td>
+
+                <%= account.balance %>
+                <%=account.currency_type == 0 ? "VND" : "USA"%></td>
               <td>
                 <div type="button"  class="text-success" data-toggle="modal" data-target="<%= "#editForm_#{account.id}" %>">Edit Account</div>
                 <%= render "form", account: account, target: "editForm_#{account.id}", type: "edit" %>
