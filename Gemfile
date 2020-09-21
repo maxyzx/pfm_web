@@ -33,6 +33,7 @@ gem "devise"
 gem "draper"
 gem 'font-awesome-sass', '~> 4.2.0'
 gem "draper"
+gem "slim"
 
 
 
