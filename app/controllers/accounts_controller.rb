@@ -12,7 +12,7 @@ class AccountsController < ApplicationController
   end
 
   def create
-    @account = current_user.accounts.new(account_params).decorate
+    @account = current_user.accounts.new(account_params)
 
     respond_to do |format|
       if @account.save
