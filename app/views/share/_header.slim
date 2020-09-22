@@ -1,0 +1,19 @@
+nav.navbar.navbar-expand.boder-bottom.shadow-sm
+  .container
+    = link_to 'Personal Financial Management', root_path ,class:"text-dark text-decoration-none navbar-brand"
+    - if user_signed_in?
+      .btn-group
+        a[type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"]
+          span.boder-dot
+            span.dot
+        .dropdown-menu.dropdown-menu-right
+          p.name-user
+            = current_user.decorate.full_name
+          .dropdown-divider
+
+          a.dropdown-item.item
+            | Settings
+          = link_to "Logout", destroy_user_session_path,method: :delete,class:"item logout"
+    - else
+      nav.my-2.my-md-0.mr-md-3
+        = link_to "Login", new_user_session_path, class:"btn button"
