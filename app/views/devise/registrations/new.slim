@@ -1,0 +1,38 @@
+.container.form-login[style="max-width:600px ; "]
+  .container
+    h2.text-center.title-form
+      | Sign up
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .form-row
+        .form-group.col-md-6
+          = f.label :first_name
+          br
+          = f.text_field :first_name, autofocus: true, autocomplete: "First name" , required:"required" ,class:"form-control input-form"
+        .form-group.col-md-6
+          = f.label :last_name
+          br
+          = f.text_field :last_name, autofocus: true, autocomplete: "Last name", required:"required" ,class:"form-control input-form"
+      .field
+        = f.label :Phone
+        br
+        = f.text_field :phone, autofocus: true, autocomplete: "phone" , required:"required" ,class:"form-control input-form"
+      .field
+        = f.label :address
+        br
+        = f.text_field :address, autofocus: true, autocomplete: "address" , required:"required" ,class:"form-control input-form"
+      .field
+        = f.label :email
+        br
+        = f.email_field :email, autofocus: true, autocomplete: "email" , required:"required" ,class:"form-control input-form"
+      .field
+        = f.label :password
+        - if @minimum_password_length
+          em
+            | (
+            = @minimum_password_length
+            |  characters minimum)
+        br
+        = f.password_field :password, autocomplete: "new-password", required:"required" ,class:"form-control input-form"
+      .actions
+        = f.submit "Sign Up", class:"btn button icon",style:"width:180px"

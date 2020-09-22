@@ -1,0 +1,13 @@
+.container.form-login[style="max-width:400px "]
+  h2.text-center.title-form
+    | Forgot password
+  = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+    = render "devise/shared/error_messages", resource: resource
+    .field
+      = f.label :"Enter your email"
+      br
+      = f.email_field :email, autofocus: true, autocomplete: "email", required:"required" ,class:"form-control input-form"
+    p
+
+    .actions
+      = f.submit "Send instructions email", class:"btn icon button"
