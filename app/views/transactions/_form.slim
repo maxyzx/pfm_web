@@ -1,0 +1,30 @@
+.modal.fade id="targer" tabindex'-1' role="dialog" aria-hidden='true'
+  .modal-dialog[role="document"]
+    .modal-content
+      .modal-body
+        - if type == "new"
+          h5
+            | New Transaction
+        - else
+          h5
+            | Edit
+        = form_with(model: transaction) do |form|
+          .form-group
+            = form.label :name, class:"col-form-label"
+            = form.text_field :name, class:"form-control"
+          .form-group
+            = form.label :category, class:"col-form-label"
+            = form.text_field :category, class:"form-control"
+          .form-group
+            = form.label :amount, class:"col-form-label"
+            = form.text_field :amount, class:"form-control"
+          .field
+            = form.label :transaction_type
+            = form.select :transaction_type, [["Deposit", 0], ["Expense", 1]]
+          .field
+            = form.label :account_id
+            = form.collection_select :account_id, current_user.accounts, :id, :name
+          .actions.container
+            button.btn.btn-outline-secondary[type="button" data-dismiss="modal"]
+              | Cancel
+            = form.submit class:"btn btn-primary"
