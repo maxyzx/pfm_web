@@ -32,6 +32,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem "devise"
 gem "draper"
 gem 'font-awesome-sass', '~> 4.2.0'
+gem "draper"
 
 
 

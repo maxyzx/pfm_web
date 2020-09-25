@@ -12,15 +12,23 @@
             <%= form.label :name, class:"col-form-label"%>
             <%= form.text_field :name, class:"form-control" %>
           </div>
-
+      <% if type == "new" %>
+      <% else %>
           <div class="form-group">
-            <%= form.label :status, class:"col-form-label"%>
-            <%= form.check_box :status, class:"form-control" %>
+            <%= form.label :acctive  %>
+            <%= form.check_box :status %>
           </div>
+      <%end %>
 
-          <div class="actions">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-            <%= form.submit class:"btn btn-primary" %>
+
+      <div class="field">
+        <%= form.label :currency %>
+        <p><%= form.select :currency_type, [["VND", 0], ["USD", 1]] %>
+      </div>
+
+          <div class="actions container">
+            <button type="button" class="btn btn-outline-secondary " data-dismiss="modal">Cancel</button>
+            <%= form.submit class:"btn btn-primary"  %>
           </div>
         <% end %>
       </div>

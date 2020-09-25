@@ -1,18 +1,20 @@
-<div class="container">
+<div class="container home-page">
   <div class="row">
-    <div class="col sm-6 ">
-      <h1 class="titile_home">Make money fun! </h1>
-      <p class=".mini_title">Track your money way<p>
+    <div class="col-sm-6 ">
+      <p class="title-home">Make money fun! </p>
+      <p class="mini-title">Track your money way<p>
       <% if user_signed_in? %>
-        OK
+        <%= link_to 'Account', accounts_path %>
+        <%= link_to 'Transaction', transactions_path %>
+
       <% else %>
         <nav class="my-2 my-md-0 mr-md-3">
-          <%= link_to "Sign up for free", new_user_registration_path, class:"btn btn-primary sign_up" %>
+          <%= link_to "Sign up for free", new_user_registration_path, class:"btn btn-primary " %>
         </nav>
       <% end %>
 
     </div>
-    <div class="col sm-6">
+    <div class="col-sm-6">
       <svg width="495" height="437" viewBox="0 0 495 437" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <rect width="494.455" height="436.15" fill="url(#pattern0)"/>
         <defs>
