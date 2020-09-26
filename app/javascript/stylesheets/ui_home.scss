@@ -20,73 +20,105 @@
 }
 
 .form-login{
+  padding: 0 0 66px 0;
   margin-top: 22px;
   border: 1px solid #EBEBEB;
   max-width:400px ;
+  .field{
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+  .field.field-password{
+    padding-top: 24px;
+    padding-bottom: 31px;
+  }
+  .actions{
+    padding-bottom: 0px;
+    .btn.button{
+      width:180px;
+      margin-bottom:30px;
+    }
+  }
+
 }
+
 .form-forgot{
-  margin-top: 22px;
+  margin-top: 32px;
   border: 1px solid #EBEBEB;
-  max-width:400px ;
+  max-width:400px;
+  padding: 0 0 0 0 ;
+  .field{
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+  .actions{
+    padding: 34px 0 56px 0;
+  }
 }
 
 .form-sigup{
   margin-top: 22px;
   border: 1px solid #EBEBEB;
   max-width:600px ;
+  padding: 0 0 0 0 ;
+  .field{
+    padding: 9px 140px 0 140px;
+  }
+  .field.field-padding{
+    padding:19px 140px 0 140px;
+  }
+  .form-row{
+    padding: 0 140px 0 140px;
+    .form-group.col-md-6{
+      padding-top:0px;
+      padding-bottom:0px;
+    }
+  }
+  .actions{
+    padding:37px 0 46px 0;
+    .btn{
+      width:180px;
+    }
+  }
+
 }
 
 .title-form{
-  font-size: 28px;
-  line-height: 28px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
   padding: 47px 0 36px 0 ;
+
 }
 
-.container {
-  padding: 0 30px 40px 30px;
-}
+
 
 .link-devise{
   font-size: 12px;
   line-height: 12px;
   color: #23D2B6;
+  padding-bottom: 100px;
 }
 
 .link-devise:hover {
   color: black;
 }
 
-.input-form{
-  margin-bottom: 25px;
-}
-
-.dropdown-menu{
-  margin-top: 30px;
-}
 
 .name-user{
   font-weight: bold;
   font-size: 16px;
-  line-height: 23px;
-  display: flex;
   align-items: center;
   padding: 18px 0 35px 22px ;
+  width: 200px;
 }
-
-.item{
-  font-size: 14px;
-  line-height: 20px;
-  display: flex;
-  align-items: center;
-}
-
 .actions{
-  padding: 35px;
   .btn {
-    width: 180px;
+    width: 207px;
     height: 44px;
     border: 1px solid #EBEBEB;
-
+    padding: 0 28px 0 28px;
+    font-size: 14px;
   }
   .btn.btn-primary{
     background-color: #009E9E;
@@ -102,7 +134,6 @@
   .text-dark.text-decoration-none{
     font-weight: bold;
     font-size: 16px;
-    line-height: 205%;
   }
 }
 
@@ -116,8 +147,8 @@
 }
 
 .dot:hover{
-  height: 40px;
-  width: 40px;
+  height: 38px;
+  width: 38px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -140,9 +171,66 @@
 }
 
 .boder-dot:hover {
-  height: 44px;
-  width: 44px;
+  height: 42px;
+  width: 42px;
   background-color: blue;
   border-radius: 50%;
   display: inline-block;
+}
+.mini-text{
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 12px;
+}
+.container-fluid.border-bottom{
+  height: 60px;
+  .col-sm-10{
+    padding: 14px 0 0 0 ;
+    .text-dark{
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 205%;
+      padding: 0 0 0 170px;
+    }
+  }
+  .col-sm-2{
+    padding: 10px 0 0 0 ;
+    .btn.button{
+      height: 33px;
+      width:64px;
+      font-size: 12px;
+      margin-right: 180px;
+      margin-top:4px;
+    }
+    .ccc{
+      margin-right: 180px;
+    }
+  }
+
+}
+
+.dropdown-menu.dropdown-menu-right{
+  margin: 40px 0px 0px 0px;
+  width: 200px;
+  height: 224px;
+  padding: 0 0 33px 0;
+}
+
+.setting{
+  font-size: 14px;
+  padding: 15px 0 20px 22px;
+}
+
+.logout{
+  color:red;
+  font-size: 14px;
+  width: 200px;
+  padding-left:22px;
+}
+
+.modal-body{
+  .form-group{
+
+  }
+
 }

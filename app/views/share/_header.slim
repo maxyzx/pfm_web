@@ -1,21 +1,18 @@
-nav.navbar.navbar-expand.boder-bottom.shadow-sm
-  .container
-    = link_to root_path do
-      p.text-dark.text-decoration-none.navbar-brand
-        | Personal Financial Management
-    div
+.container-fluid.border-bottom
+  .row
+    .col-sm-10
+      = link_to 'Personal Financial Management', root_path ,class:"text-dark"
+    .col-sm-2
       - if user_signed_in?
-        .btn-group
-          a[type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"]
-            span.boder-dot
-              span.dot
+        a[type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"]
+          span.boder-dot
+            span.dot
           .dropdown-menu.dropdown-menu-right
-            p.name-user
+            .name-user.border-bottom
               = current_user.decorate.full_name
-            .dropdown-divider
-            a.dropdown-item.item
+            .setting
               | Settings
-            = link_to "Logout", destroy_user_session_path, method: :delete, class:"item",style:" padding:20px 0 33px 22px;color:red"
+
+            = link_to "Logout", destroy_user_session_path, method: :delete, class:"logout"
       - else
-        nav.my-2.my-md-0.mr-md-3
-          = link_to "Login", new_user_session_path, class:"btn button"
+        = link_to "Login", new_user_session_path, class:"btn button"

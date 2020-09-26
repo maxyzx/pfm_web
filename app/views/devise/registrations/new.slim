@@ -5,33 +5,28 @@
     = render "devise/shared/error_messages", resource: resource
     .form-row
       .form-group.col-md-6
-        = f.label :first_name
+        = f.label :first_name ,class:"mini-text"
         br
         = f.text_field :first_name, autofocus: true, autocomplete: "First name" , required:"required" ,class:"form-control input-form"
       .form-group.col-md-6
-        = f.label :last_name
+        = f.label :last_name,class:"mini-text"
         br
         = f.text_field :last_name, autofocus: true, autocomplete: "Last name", required:"required" ,class:"form-control input-form"
     .field
-      = f.label :Phone
-      br
-      = f.text_field :phone, autofocus: true, autocomplete: "phone" , required:"required" ,class:"form-control input-form"
-    .field
-      = f.label :address
+      = f.label :address ,class:"mini-text"
       br
       = f.text_field :address, autofocus: true, autocomplete: "address" , required:"required" ,class:"form-control input-form"
-    .field
-      = f.label :email
+    .field.field-padding
+      = f.label :Phone,class:"mini-text"
+      br
+      = f.text_field :phone, autofocus: true, autocomplete: "phone" , required:"required" ,class:"form-control input-form"
+    .field.field-padding
+      = f.label :email ,class:"mini-text"
       br
       = f.email_field :email, autofocus: true, autocomplete: "email" , required:"required" ,class:"form-control input-form"
-    .field
-      = f.label :password
-      - if @minimum_password_length
-        em
-          | (
-          = @minimum_password_length
-          |  characters minimum)
+    .field.field-padding
+      = f.label :password ,class:"mini-text"
       br
       = f.password_field :password, autocomplete: "new-password", required:"required" ,class:"form-control input-form"
     .actions
-      = f.submit "Sign Up", class:"btn button icon",style:"width:180px"
+      = f.submit "Sign Up", class:"btn button icon"

@@ -2,24 +2,16 @@
   .modal-dialog[role="document"]
     .modal-content
       .modal-body
-        - if type == "new"
-          h5
-            | New Form
-        - else
-          h5
-            | Edit Form
         = form_with(model: account) do |form|
           .form-group
-            = form.label :name, class:"col-form-label"
+            = form.label :name, class:"mini-text"
             = form.text_field :name, class:"form-control"
-          - if type == "new"
-
-          - else
+          - unless type == "new"
             .form-group
               = form.label :acctive
               = form.check_box :status
           .field
-            = form.label :currency
+            = form.label :currency, class:"mini-text"
             p
               = form.select :currency_type, [["VND", 0], ["USD", 1]]
           .actions.container
