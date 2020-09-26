@@ -1,20 +1,28 @@
 .modal.fade id="#{target}" tabindex='-1' role="dialog" aria-hidden='true'
   .modal-dialog[role="document"]
-    .modal-content
+    .modal-content.form-account
       .modal-body
         = form_with(model: account) do |form|
           .form-group
             = form.label :name, class:"mini-text"
+            span.require
+              | (Require)
             = form.text_field :name, class:"form-control"
           - unless type == "new"
             .form-group
               = form.label :acctive
-              = form.check_box :status
+              p
+                = form.check_box :status
           .field
             = form.label :currency, class:"mini-text"
+            span.require
+              | (Require)
             p
               = form.select :currency_type, [["VND", 0], ["USD", 1]]
-          .actions.container
-            button.btn.btn-outline-secondary[type="button" data-dismiss="modal"]
-              | Cancel
-            = form.submit class:"btn btn-primary"
+          .actions
+            .row
+              .col-sm-6
+                button.btn.btn-outline-secondary[type="button" data-dismiss="modal"]
+                  | Cancel
+              .col-sm-6
+                = form.submit class:"btn btn-primary" ,value:"Save"
