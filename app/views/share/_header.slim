@@ -1,7 +1,7 @@
 .container-fluid.border-bottom
   .row
     .col-sm-10
-      = link_to 'Personal Financial Management', root_path ,class:"text-dark"
+      = link_to "#{t '.logo'}", root_path ,class:"text-dark"
     .col-sm-2
       - if user_signed_in?
         a[type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"]
@@ -11,8 +11,8 @@
             .name-user.border-bottom
               = current_user.decorate.full_name
             .setting
-              | Settings
+              = t 'setting'
 
-            = link_to "Logout", destroy_user_session_path, method: :delete, class:"logout"
+            = link_to "#{t 'common.logout'}", destroy_user_session_path, method: :delete, class:"logout"
       - else
         = link_to "Login", new_user_session_path, class:"btn button"

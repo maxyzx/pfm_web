@@ -5,21 +5,21 @@
     .row.line-header
       .col-sm-10
         p.title-table
-          | Account
+          = t 'common.account'
       .col-sm-2
         button.btn.btn-outline-success[type="button" data-toggle="modal" data-target="#newForm" data-whatever="@getbootstrap"]
-          | New Account
+          = t '.new_account'
         = render "form", account: @account, target: "newForm", type: "new"
     table.table.table-borderless
       tr
         th[scope="col"]
-          | Account name
+          = t '.acccount_name'
         th[scope="col"]
-          | Status
+          = t '.status'
         th[scope="col"]
-          | Balance
+          = t '.balance'
         th[scope="col"]
-          | Actions
+          = t 'common.actions'
       tbody
         - @accounts.each do |account|
           - if account.id
@@ -27,13 +27,13 @@
               td
                 =account.name
               td.active-color
-                = account.status ? "Active" : "Disable"
+                = account.status ? "#{t 'common.active'}" : "#{t 'common.disable'}"
               td
                 = account.balance
                 =account.currency_type == 0 ? "VND" : "USA"
               td
                 p.text-success*{data: {toggle: "modal", target: "#editForm_#{account.id}"}, type: "button" }
-                  = "Edit Account"
+                  = t '.edit_account'
                   = render "form", account: account, target: "editForm_#{account.id}", type: "edit"
 
 

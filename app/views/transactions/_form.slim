@@ -4,37 +4,39 @@
       .modal-body
         = form_with(model: transaction) do |form|
           .form-group
-            = form.label :"Account Name ", class:"mini-text"
+            = form.label :"#{t 'common.name'}", class:"mini-text"
             span.require
-              | (Require)
+              = t 'common.require'
             = form.text_field :name, class:"form-control"
           .form-group
-            = form.label :category, class:"mini-text"
+            = form.label :category, class:"mini-text" do
+              = t '.category'
             span.require
-              | (Require)
+              = t 'common.require'
             = form.text_field :category, class:"form-control"
           .form-group
-            = form.label :amount, class:"mini-text"
-            span.require
-              | (Require)
-            = form.text_field :amount, class:"form-control"
+            = form.label :amount, class: "mini-text" do
+              = t '.amount'
+              span.require
+                = t 'common.require'
+            = form.text_field :amount, class: "form-control"
           .field
-            = form.label :"Type", class:"mini-text"
+            = form.label :transaction_type, class: "mini-text" do
+              = t '.type'
             span.require
-              | (Require)
+              = t 'common.require'
             p
               = form.select :transaction_type, [["Deposit", 0], ["Expense", 1]]
           .field.later
-            = form.label :"Choose Account", class:"mini-text"
+            = form.label :"#{ t 'common.account'} ", class: "mini-text"
             span.require
-              | (Require)
+              = t'common.require'
             p
               = form.collection_select :account_id, current_user.accounts, :id, :name
           .actions
             .row
               .col-sm-6
                 button.btn.btn-outline-secondary[type="button" data-dismiss="modal"]
-                  | Cancel
+                  = t 'common.cancel'
               .col-sm-6
-                = form.submit class:"btn btn-primary",value:"Save"
-
+                = form.submit class: "btn btn-primary", value:"#{t 'common.save'}"

@@ -5,25 +5,25 @@
     .row.line-header
       .col-sm-10
         p.title-table
-          | Transaction
+          = t 'common.transaction'
       .col-sm-2
         button.btn.btn-outline-success[type="button" data-toggle="modal" data-target="#newForm" data-whatever="@getbootstrap"]
-          | New Transaction
+          = t '.new_transaction'
         = render "form", transaction: @transaction, target: "newForm", type: "new"
     table.table.table-borderless
       tr
         th[scope="col"]
-          | Transaction Name
+          = t '.name_transaction'
         th[scope="col"]
-          | Creatgory
+          = t 'common.creatgory'
         th[scope="col"]
-          | Accounts
+          = t 'account'
         th[scope="col"]
-          | Ammount
+          = t '.amount'
         th[scope="col"]
-          | Type
+          = t '.type'
         th[scope="col"]
-          | Acctions
+          = t 'common.actions'
       tbody
         - @transactions.each do |transaction|
           - if transaction.id

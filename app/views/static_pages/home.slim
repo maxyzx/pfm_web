@@ -2,13 +2,13 @@
   .row
     .col-sm-6
       p.title-home
-        | Make money fun!
+        = t '.title'
       p.mini-title
-        | Track your money way
+        = t '.mini_title'
       p
         - if user_signed_in?
-          = link_to 'Account', accounts_path
-          = link_to 'Transaction', transactions_path
+          = link_to "#{t 'common.account'}", accounts_path
+          = link_to "#{t 'common.transaction'}", transactions_path
         - else
           nav.my-2.my-md-0.mr-md-3
             = link_to "Sign up for free", new_user_registration_path, class:"btn btn-primary "

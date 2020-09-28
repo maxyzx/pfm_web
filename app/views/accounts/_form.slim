@@ -4,9 +4,10 @@
       .modal-body
         = form_with(model: account) do |form|
           .form-group
-            = form.label :name, class:"mini-text"
+            = form.label :name, class:"mini-text" do
+              = t ".name"
             span.require
-              | (Require)
+              = t 'common.require'
             = form.text_field :name, class:"form-control"
           - unless type == "new"
             .form-group
@@ -14,15 +15,16 @@
               p
                 = form.check_box :status
           .field
-            = form.label :currency, class:"mini-text"
+            = form.label :currency_type, class:"mini-text" do
+              = t '.currency'
             span.require
-              | (Require)
+              = t 'common.require'
             p
               = form.select :currency_type, [["VND", 0], ["USD", 1]]
           .actions
             .row
               .col-sm-6
                 button.btn.btn-outline-secondary[type="button" data-dismiss="modal"]
-                  | Cancel
+                  =t 'common.cancel'
               .col-sm-6
-                = form.submit class:"btn btn-primary" ,value:"Save"
+                = form.submit class:"btn btn-primary" ,value: "#{t 'common.save'}"
