@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :accounts
   resources :transactions
+
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
+
 end
