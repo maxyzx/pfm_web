@@ -1,0 +1,12 @@
+.container.border-bottom
+  p
+    = link_to "#{t '.home'}", root_path ,class:"text-muted"
+  p
+    = link_to "#{t 'common.account'}", accounts_path ,class:"text-muted"
+  p
+    = link_to "#{t 'common.transaction'}", transactions_path ,class:"text-muted"
+.container
+  p
+    = t '.categories'
+  p
+    = t 'common.setting'

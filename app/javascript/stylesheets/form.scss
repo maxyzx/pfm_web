@@ -47,12 +47,63 @@ tr {
   color: #A9A9A9;
   font-size: 14px;
 }
+
 .container.border-bottom{
   padding-top: 32px;
   padding-bottom: 53 ;
   margin-bottom: 12px;
-
 }
+
 .col-sm-2.border-right.left-table{
   height:calc(100vh - 60px);
+}
+
+.modal-content.form-account{
+  width:600px;
+  height:315px;
+  .modal-body{
+    padding: 42px 40px 47px 40px;
+
+    .btn{
+      width: 180px;
+      height: 44px;
+    }
+    .btn.btn-outline-secondary{
+      margin-left: 68px;
+    }
+    .btn.btn-primary{
+      margin-right: 68px;
+    }
+    .actions{
+      padding-top:30px;
+    }
+  }
+}
+
+.require{
+  color:red;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.modal-content.form-transaction{
+  height: 550px;
+  width: 600px;
+  .modal-body{
+    padding: 42px 40px 47px 40px;
+
+    .btn{
+      width: 180px;
+      height: 44px;
+    }
+    .btn.btn-outline-secondary{
+      margin-left: 68px;
+    }
+    .btn.btn-primary{
+      margin-right: 68px;
+    }
+  }
+  .actions{
+    padding-top:30px;
+  }
 }

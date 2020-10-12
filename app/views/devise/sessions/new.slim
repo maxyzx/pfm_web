@@ -1,0 +1,15 @@
+.container.form-login
+  h2.text-center.title-form
+    | Login
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .field
+      = f.label :email, class:"mini-text"
+      br
+      = f.email_field :email, autofocus: true, autocomplete: "email", required:"required" ,class:"form-control input-form"
+    .field.field-password
+      = f.label :password, class:"mini-text"
+      br
+      = f.password_field :password, autocomplete: "current-password" , required:"required" ,class:"form-control input-form"
+    .actions
+      = f.submit "Login", class:"btn button icon"
+  = render "devise/shared/links"

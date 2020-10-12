@@ -21,6 +21,14 @@ class TransactionsController < ApplicationController
   def update
     respond_to do |format|
       if @transaction.update(transaction_params)
+        TransactionUpdateMailer.update_transaction(
+          @transaction.id,
+          current_user.email
+        ).deliver_later
+
+        # deliver_later
+        # deliver_now
+
         format.html { redirect_to transactions_path, notice: 'Transaction was successfully updated.'}
       else
         format.html { render :show }

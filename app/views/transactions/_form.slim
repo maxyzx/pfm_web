@@ -1,0 +1,42 @@
+.modal.fade id="#{target}" tabindex='-1' role="dialog" aria-hidden='true'
+  .modal-dialog[role="document"]
+    .modal-content.form-transaction
+      .modal-body
+        = form_with(model: transaction) do |form|
+          .form-group
+            = form.label :"#{t 'common.name'}", class:"mini-text"
+            span.require
+              = t 'common.require'
+            = form.text_field :name, class:"form-control"
+          .form-group
+            = form.label :category, class:"mini-text" do
+              = t '.category'
+            span.require
+              = t 'common.require'
+            = form.text_field :category, class:"form-control"
+          .form-group
+            = form.label :amount, class: "mini-text" do
+              = t '.amount'
+              span.require
+                = t 'common.require'
+            = form.text_field :amount, class: "form-control"
+          .field
+            = form.label :transaction_type, class: "mini-text" do
+              = t '.type'
+            span.require
+              = t 'common.require'
+            p
+              = form.select :transaction_type, [["Deposit", 0], ["Expense", 1]]
+          .field.later
+            = form.label :"#{ t 'common.account'} ", class: "mini-text"
+            span.require
+              = t'common.require'
+            p
+              = form.collection_select :account_id, current_user.accounts, :id, :name
+          .actions
+            .row
+              .col-sm-6
+                button.btn.btn-outline-secondary[type="button" data-dismiss="modal"]
+                  = t 'common.cancel'
+              .col-sm-6
+                = form.submit class: "btn btn-primary", value:"#{t 'common.save'}"

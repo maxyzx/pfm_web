@@ -1,0 +1,44 @@
+.row
+  .col-sm-2.border-right.left-table
+    = render "share/link"
+  .col-sm-10.border-left.abc
+    .row.line-header
+      .col-sm-10
+        p.title-table
+          = t 'common.transaction'
+      .col-sm-2
+        button.btn.btn-outline-success[type="button" data-toggle="modal" data-target="#newForm" data-whatever="@getbootstrap"]
+          = t '.new_transaction'
+        = render "form", transaction: @transaction, target: "newForm", type: "new"
+    table.table.table-borderless
+      tr
+        th[scope="col"]
+          = t '.name_transaction'
+        th[scope="col"]
+          = t 'common.creatgory'
+        th[scope="col"]
+          = t 'account'
+        th[scope="col"]
+          = t '.amount'
+        th[scope="col"]
+          = t '.type'
+        th[scope="col"]
+          = t 'common.actions'
+      tbody
+        - @transactions.each do |transaction|
+          - if transaction.id
+            tr
+              td.black
+                = transaction.name
+              td.black
+                = transaction.category
+              td.black
+                = transaction.account&.name
+              td.black
+                = transaction.amount
+              td.black
+                =transaction.transaction_type == 0 ? "Deposit" : "Expense"
+              td
+                p.text-success*{data: {toggle: "modal" , target: "#editForm_#{transaction.id}"}, type:"button" }
+                  = "Edit Transaction"
+                  = render "form", transaction: transaction, target: "editForm_#{transaction.id}", type: "edit"
