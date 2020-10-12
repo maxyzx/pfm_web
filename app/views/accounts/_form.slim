@@ -11,7 +11,8 @@
             = form.text_field :name, class:"form-control"
           - unless type == "new"
             .form-group
-              = form.label :acctive
+              = form.label :acctive do
+                = t ".active"
               p
                 = form.check_box :status
           .field
