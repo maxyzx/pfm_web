@@ -18,17 +18,17 @@
           </div>
           <div class="form-group">
             <%= form.label :amount, class:"col-form-label"%>
-            <%= form.text_field :amount, class:"form-control" %>
+            <%= form.text_field :amount , class:"form-control"%>
           </div>
 
-          <div class="field">
+          <div class="form-group">
             <%= form.label :transaction_type %>
-            <%= form.select :transaction_type, [["Deposit", 0], ["Expense", 1]] %>
+            <%= form.select :transaction_type, [["Deposit", 0], ["Expense", 1]], {}, {class: "form-control"} %>
           </div>
 
-          <div class="field">
+          <div class="form-group">
             <%= form.label :account_id %>
-            <%= form.collection_select :account_id, current_user.accounts, :id, :name %>
+            <%= form.collection_select :account_id, current_user.accounts, :id, :name ,{}, {class: "form-control"}%>
           </div>
 
           <div class="actions container">

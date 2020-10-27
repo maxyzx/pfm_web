@@ -16,14 +16,15 @@
       <% else %>
           <div class="form-group">
             <%= form.label :acctive  %>
-            <%= form.check_box :status %>
+            <%= form.check_box :status , { :class => 'eula_check' }%>
           </div>
       <%end %>
 
 
-      <div class="field">
+      <div class="field" >
         <%= form.label :currency %>
-        <p><%= form.select :currency_type, [["VND", 0], ["USD", 1]] %>
+        <%= form.select :currency_type, [["VND", 0], ["USD", 1]], {}, {class: "form-control"}  %>
+
       </div>
 
           <div class="actions container">
