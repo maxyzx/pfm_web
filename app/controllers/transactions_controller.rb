@@ -28,8 +28,6 @@ class TransactionsController < ApplicationController
     end
   end
 
-
-
   def transaction_params
     params.require(:transaction).permit(:name, :category , :amount ,:account_id,:transaction_type)
   end
